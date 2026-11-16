@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#dcd9c9">
-<meta name="description" content="Pillbox — an alternative band formed in 2024.">
+<meta name="description" content="Pillbox is a handsome band.">
 <title>PILLBOX — Alternative Band</title>
 <style>
 :root{--ink:#24251f;--paper:#dcd9c9;--olive:#777b5c;--red:#a64d3d;--muted:#77776c}
@@ -39,7 +39,7 @@ footer{border-top:1px solid #aaa797;padding-top:25px;padding-bottom:25px;display
  <h1 class="head">PILLBOX<span>.</span></h1>
  <div class="hero-grid">
   <div class="hero-copy">
-   <div><div class="eyebrow">[ FIVE PEOPLE. ONE BAND. ]</div><p class="tagline">A little strange, a little loud, and always somewhere in between.</p><p class="smallcopy">Pillbox is an alternative band formed in 2024. Through changing lineups and different sounds, the band continues to find its own frequency.</p><div class="actions"><a class="btn" href="#music">LISTEN TO OUR DEMOS ↘</a><a class="btn" href="#members">THE BAND</a></div></div>
+   <div><div class="eyebrow">[ FIVE PEOPLE. ONE BAND. ]</div><p class="tagline">A little strange, a little loud, and always somewhere in between.</p><p class="smallcopy">Pillbox is a handsome band.</p><div class="actions"><a class="btn" href="#music">LISTEN TO OUR DEMOS ↘</a><a class="btn" href="#members">THE BAND</a></div></div>
    <div class="mono" style="font-size:10px;color:var(--muted);margin-top:45px">CURRENT LINEUP / 2026</div>
   </div>
   <div class="hero-art" aria-label="Stylized original band illustration">
@@ -64,7 +64,7 @@ footer{border-top:1px solid #aaa797;padding-top:25px;padding-bottom:25px;display
 <section id="music" class="section wrap">
  <div class="eyebrow">03 / MUSIC & RECORDINGS</div><h2 class="head section-title">THE RECORDS.</h2><div class="records-grid" id="records"></div>
  <div class="tracklist" id="tracklist"></div>
- <p class="bodycopy" style="margin-top:18px">DEMO AUDIO WILL BE AVAILABLE HERE WHEN THE BAND UPLOADS THE RECORDINGS.</p>
+ 
 </section>
 <section class="quote"><div class="wrap"><div class="eyebrow" style="color:#e8e4d5">04 / A SMALL REMINDER</div><blockquote>“Not everything needs to make sense. Sometimes it just needs to sound right.”</blockquote><div class="mono" style="font-size:10px;margin-top:25px">— PILLBOX</div></div></section>
 <section id="find" class="section wrap">
@@ -72,12 +72,12 @@ footer{border-top:1px solid #aaa797;padding-top:25px;padding-bottom:25px;display
 </section>
 </main>
 <footer class="wrap"><span>PILLBOX © 2026</span><span>MADE WITH NO PARTICULAR PLAN.</span><a href="#top">BACK TO TOP ↑</a></footer>
-<div class="player"><button id="play" aria-label="Play or pause">▶</button><div class="player-info"><strong id="now">PILLBOX / NO TRACK SELECTED</strong><small id="player-status">DEMO PLAYER / ADD YOUR MP3 FILES TO THE MUSIC FOLDER</small></div><span class="mono" style="font-size:10px">P!LLBOX.FM</span><audio id="audio" preload="metadata"></audio></div>
+<div class="player"><button id="play" aria-label="Play or pause">▶</button><div class="player-info"><strong id="now">PILLBOX / NO TRACK SELECTED</strong><small id="player-status">DEMO PLAYER / SELECT A RECORDING TO LISTEN</small></div><span class="mono" style="font-size:10px">P!LLBOX.FM</span><audio id="audio" preload="metadata"></audio></div>
 <script>
 const members=[
  {name:"ELCUOMO",role:"VOCAL / GUITAR",note:"THE PERFECTIONIST",desc:"The handsome perfectionist. Always neat, always confident, and perhaps a little too fond of himself.",bg:"#a64d3d",skin:"#d0ae92",hair:"#282921",style:0},
  {name:"RAPAWOK",role:"GUITAR",note:"THE UNPREDICTABLE",desc:"Freedom in human form. Unusual, unpredictable, and never particularly interested in fitting in.",bg:"#777b5c",skin:"#bd987e",hair:"#25261f",style:1},
- {name:"RISSS",role:"BASS",note:"THE HAPPY CHAOS",desc:"Long hair, a permanent smile, and a relaxed chaotic energy. The band’s happy presence.",bg:"#a9a18d",skin:"#bd997e",hair:"#282921",style:2},
+ {name:"RISSS",role:"BASS",note:"THE HAPPY CHAOS",desc:"Engineer :)",bg:"#a9a18d",skin:"#bd997e",hair:"#282921",style:2},
  {name:"ATIR",role:"DRUMS",note:"THE QUIET ONE",desc:"Quiet, composed, and effortlessly cool. Usually found keeping things together behind the kit.",bg:"#777b5c",skin:"#b89a7e",hair:"#292a24",style:0},
  {name:"UQI",role:"SYNTH",note:"THE SILENT FREQUENCY",desc:"Calm, handsome, and quietly in his own world. The understated presence behind the synths.",bg:"#a64d3d",skin:"#d0aa8e",hair:"#24251f",style:1}
 ];
@@ -85,7 +85,7 @@ function portrait(m){let hair=m.style===2?`<path d="M42 88Q15 8 105 5Q190 7 166 
 document.getElementById("members-list").innerHTML=members.map((m,i)=>`<button class="member" onclick="showBio(${i})"><div class="portrait">${portrait(m)}</div><div class="member-name">${m.name}</div><div class="member-role">${m.role}</div><div class="member-note">${m.note}</div></button>`).join("");
 function showBio(i){let m=members[i];document.getElementById("bio-name").textContent=m.name;document.getElementById("bio-role").textContent=m.role;document.getElementById("bio-desc").textContent=m.desc;document.getElementById("bio").classList.add("show");}
 const tracks=[["Demo 01","PB / 001","music/demo-01.mp3"],["Demo 02","PB / 002","music/demo-02.mp3"]];
-document.getElementById("records").innerHTML=tracks.map((t,i)=>`<article class="record"><div class="art"><svg viewBox="0 0 400 400"><rect width="400" height="400" fill="${i?"#c4ad92":"#a7a48d"}"/>${i?'<path d="M-20 70Q140 -30 420 100V400H-20Z" fill="#a64d3d"/><path d="M0 320Q160 180 400 270" stroke="#292a23" stroke-width="55" fill="none"/><circle cx="204" cy="172" r="85" fill="#777b5c"/><circle cx="204" cy="172" r="38" fill="#292a23"/>':'<circle cx="205" cy="197" r="150" fill="#777b5c"/><circle cx="205" cy="197" r="112" fill="#292a23"/><circle cx="205" cy="197" r="75" fill="#dcd9c9"/><circle cx="205" cy="197" r="17" fill="#a64d3d"/><path d="M0 300L400 80" stroke="#a64d3d" stroke-width="14"/>'}<text x="18" y="45" fill="#292a23" font-family="Georgia" font-style="italic" font-size="29">Pillbox / ${i?"demo 02":"demo 01"}</text></svg></div><div class="record-meta"><span class="record-title">${t[0].toUpperCase()}</span><span class="mono" style="font-size:10px">${t[1]}</span></div><div class="record-note">ADD AUDIO FILE TO ENABLE PLAYBACK</div></article>`).join("");
+document.getElementById("records").innerHTML=tracks.map((t,i)=>`<article class="record"><div class="art"><svg viewBox="0 0 400 400"><rect width="400" height="400" fill="${i?"#c4ad92":"#a7a48d"}"/>${i?'<path d="M-20 70Q140 -30 420 100V400H-20Z" fill="#a64d3d"/><path d="M0 320Q160 180 400 270" stroke="#292a23" stroke-width="55" fill="none"/><circle cx="204" cy="172" r="85" fill="#777b5c"/><circle cx="204" cy="172" r="38" fill="#292a23"/>':'<circle cx="205" cy="197" r="150" fill="#777b5c"/><circle cx="205" cy="197" r="112" fill="#292a23"/><circle cx="205" cy="197" r="75" fill="#dcd9c9"/><circle cx="205" cy="197" r="17" fill="#a64d3d"/><path d="M0 300L400 80" stroke="#a64d3d" stroke-width="14"/>'}<text x="18" y="45" fill="#292a23" font-family="Georgia" font-style="italic" font-size="29">Pillbox / ${i?"demo 02":"demo 01"}</text></svg></div><div class="record-meta"><span class="record-title">${t[0].toUpperCase()}</span><span class="mono" style="font-size:10px">${t[1]}</span></div><div class="record-note">CLICK TO LISTEN</div></article>`).join("");
 document.getElementById("tracklist").innerHTML=tracks.map((t,i)=>`<button class="track" data-index="${i}" onclick="playTrack(${i})"><span class="num">0${i+1}</span><span class="details"><span class="name">${t[0]}</span><br><span class="sub">${t[1]} / MP3</span></span><span>▶</span></button>`).join("");
 const audio=document.getElementById("audio");let current=-1;
 function playTrack(i){current=i;audio.src=tracks[i][2];audio.play().then(()=>{document.getElementById("now").textContent="PLAYING / "+tracks[i][0].toUpperCase();document.getElementById("player-status").textContent="PILLBOX DEMO RECORDING";document.getElementById("play").textContent="Ⅱ";}).catch(()=>{document.getElementById("now").textContent=tracks[i][0].toUpperCase()+" — AUDIO FILE NOT FOUND";document.getElementById("player-status").textContent="UPLOAD "+(i?"demo-02.mp3":"demo-01.mp3")+" TO THE MUSIC FOLDER";});document.querySelectorAll(".track").forEach((el,n)=>el.classList.toggle("active",n===i));}
