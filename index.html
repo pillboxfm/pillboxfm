@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#dcd9c9">
+<meta name="description" content="Pillbox — an alternative band formed in 2024.">
+<title>PILLBOX — Alternative Band</title>
+<style>
+:root{--ink:#24251f;--paper:#dcd9c9;--olive:#777b5c;--red:#a64d3d;--muted:#77776c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.serif{font-family:Georgia,serif}.mono{font-family:"Courier New",monospace}.head{font-family:Impact,"Arial Narrow",sans-serif;letter-spacing:-.055em;font-weight:900}
+header{padding:20px 4.5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #aaa797;gap:20px}
+.logo{font-size:30px}.logo span{color:var(--red)}nav{display:flex;gap:26px}.nav{font:10px "Courier New",monospace;letter-spacing:.1em}nav a:hover,a:hover{color:var(--red)}
+.wrap{padding-left:4.5%;padding-right:4.5%}.eyebrow{font:11px "Courier New",monospace;color:var(--red);letter-spacing:.08em}
+.hero{padding-top:34px;padding-bottom:52px}.hero-top{display:flex;justify-content:space-between;color:var(--muted);font:11px "Courier New",monospace;margin-bottom:8px}.hero h1{font-size:clamp(80px,17vw,215px);line-height:.86;margin:0 0 22px}.hero h1 span{color:var(--red)}
+.hero-grid{display:grid;grid-template-columns:1fr 1.12fr;gap:26px}.hero-copy{display:flex;flex-direction:column;justify-content:space-between}.hero-copy .tagline{font:clamp(28px,3.2vw,43px)/1.13 Georgia,serif;max-width:490px;margin:8px 0 20px}.smallcopy{font:12px/1.8 "Courier New",monospace;color:var(--muted);max-width:420px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.btn{border:1px solid var(--ink);padding:11px 15px;font:10px "Courier New",monospace;letter-spacing:.1em;display:inline-block;background:transparent}.btn:hover{background:var(--ink);color:var(--paper)}
+.hero-art{min-height:390px;background:var(--olive);overflow:hidden}.hero-art svg{display:block;width:100%;height:100%;min-height:390px}
+.ticker{overflow:hidden;border-top:1px solid #aaa797;border-bottom:1px solid #aaa797;padding:12px 0;white-space:nowrap;color:var(--olive);font:12px "Courier New",monospace;letter-spacing:.1em}.ticker span{display:inline-block;animation:scroll 32s linear infinite}@keyframes scroll{to{transform:translateX(-50%)}}
+section{scroll-margin-top:20px}.section{padding-top:78px;padding-bottom:78px}.story-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px}.section-title{font-size:clamp(58px,8vw,100px);line-height:.92;margin:12px 0}.olive{color:var(--olive)}.story-text{font:clamp(22px,2.6vw,30px)/1.4 Georgia,serif}.bodycopy{font:12px/1.9 "Courier New",monospace;color:var(--muted)}
+.members-section{background:#c9c6b6;padding-top:65px;padding-bottom:65px}.members{display:grid;grid-template-columns:repeat(5,1fr);gap:15px;margin-top:32px}.member{border:0;background:none;padding:0;text-align:left;color:var(--ink)}.portrait{aspect-ratio:4/5;background:#aaa;overflow:hidden}.portrait svg{width:100%;height:100%;display:block}.member:hover{transform:translateY(-4px)}.member{transition:transform .2s}.member-name{font:28px Impact,"Arial Narrow",sans-serif;margin-top:10px}.member-role,.member-note{font:10px "Courier New",monospace;margin-top:5px}.member-note{color:var(--muted)}
+.bio{display:none;border-top:1px solid #aaa797;margin-top:25px;padding-top:18px}.bio.show{display:block}.bio p{font:18px Georgia,serif}.bio button{float:right;border:0;background:none;font:10px "Courier New",monospace}
+.records-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}.record{padding:15px;background:var(--olive);color:#e8e4d5}.record:nth-child(2){background:var(--red)}.art{aspect-ratio:1;background:#aaa48e;position:relative;overflow:hidden}.art svg{width:100%;height:100%;display:block}.record-meta{display:flex;justify-content:space-between;margin-top:15px}.record-title{font:32px Impact,"Arial Narrow",sans-serif}.record-note{font:10px "Courier New",monospace;margin-top:8px}.tracklist{margin-top:32px;border-top:1px solid #aaa797}.track{width:100%;display:flex;gap:16px;align-items:center;text-align:left;padding:17px 10px;border:0;border-bottom:1px solid #aaa797;background:transparent;color:var(--ink)}.track:hover,.track.active{background:#c9c6b6}.track .num{font:25px Impact,sans-serif}.track .details{flex:1}.track .name{font:14px "Courier New",monospace}.track .sub{font:10px "Courier New",monospace;color:var(--muted);margin-top:4px}
+.quote{background:var(--olive);color:#e8e4d5;padding-top:65px;padding-bottom:65px}.quote blockquote{font:clamp(30px,5vw,60px)/1.2 Georgia,serif;max-width:950px;margin:0}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}.contact-links a{display:flex;justify-content:space-between;padding:20px 0;border-top:1px solid #aaa797;font:12px "Courier New",monospace}.contact-links a:last-child{border-bottom:1px solid #aaa797}
+footer{border-top:1px solid #aaa797;padding-top:25px;padding-bottom:25px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:var(--muted);font:10px "Courier New",monospace}
+.player{position:sticky;bottom:0;z-index:5;background:var(--olive);color:#f0eddf;padding:12px 4.5%;display:flex;align-items:center;gap:16px}.player button{background:none;border:0;color:inherit;font-size:20px}.player-info{flex:1;min-width:0}.player-info strong{display:block;font:12px "Courier New",monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.player-info small{font:10px "Courier New",monospace;opacity:.7}.player audio{display:none}
+@media(max-width:700px){header{padding:16px 5%;align-items:flex-start}.logo{font-size:25px}nav{gap:11px;flex-wrap:wrap;justify-content:flex-end}.nav{font-size:9px}.hero-grid,.story-grid,.contact-grid{grid-template-columns:1fr}.hero-art,.hero-art svg{min-height:290px}.members{grid-template-columns:repeat(2,1fr);gap:22px 12px}.members .member:last-child{grid-column:auto}.section{padding-top:58px;padding-bottom:58px}.records-grid{grid-template-columns:1fr}.hero-top span:last-child{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo head" href="#top">PILLBOX<span>.</span></a>
+  <nav class="nav"><a href="#about">ABOUT</a><a href="#members">MEMBERS</a><a href="#music">MUSIC</a><a href="#find">FIND US</a></nav>
+  <span class="nav" style="display:none">EST. 2024</span>
+</header>
+<main id="top">
+<section class="hero wrap">
+ <div class="hero-top"><span>AN ALTERNATIVE MUSIC PROJECT</span><span>INDONESIA — EST. 2024</span></div>
+ <h1 class="head">PILLBOX<span>.</span></h1>
+ <div class="hero-grid">
+  <div class="hero-copy">
+   <div><div class="eyebrow">[ FIVE PEOPLE. ONE BAND. ]</div><p class="tagline">A little strange, a little loud, and always somewhere in between.</p><p class="smallcopy">Pillbox is an alternative band formed in 2024. Through changing lineups and different sounds, the band continues to find its own frequency.</p><div class="actions"><a class="btn" href="#music">LISTEN TO OUR DEMOS ↘</a><a class="btn" href="#members">THE BAND</a></div></div>
+   <div class="mono" style="font-size:10px;color:var(--muted);margin-top:45px">CURRENT LINEUP / 2026</div>
+  </div>
+  <div class="hero-art" aria-label="Stylized original band illustration">
+   <svg viewBox="0 0 620 440" preserveAspectRatio="xMidYMid slice">
+    <rect width="620" height="440" fill="#777b5c"/><path d="M0 360Q170 300 320 365T620 325V440H0Z" fill="#3d4234"/><path d="M0 50L620 0L620 80L0 150Z" fill="#a9a88e"/>
+    <g transform="translate(25 75) rotate(-5 90 140)"><path d="M10 350Q10 220 40 190L34 95Q44 25 115 32Q190 32 188 112L175 205Q210 275 205 350Z" fill="#9c5040"/><ellipse cx="111" cy="123" rx="64" ry="80" fill="#c9a88e"/><path d="M45 103Q26 10 113 5Q200 5 175 105L148 64L125 35L92 72L66 49Z" fill="#292a23"/><path d="M65 124L102 129M122 129L154 120" stroke="#292a23" stroke-width="8"/><circle cx="84" cy="128" r="5"/><circle cx="140" cy="127" r="5"/><path d="M95 165L140 160" stroke="#292a23" stroke-width="5"/></g>
+    <g transform="translate(210 38)"><path d="M5 390Q0 265 34 200L22 105Q30 28 111 20Q193 25 199 112L184 207Q224 280 220 390Z" fill="#272821"/><ellipse cx="112" cy="126" rx="72" ry="89" fill="#aeb5a0"/><path d="M40 101Q20 0 114 0Q210 0 183 103L150 63L124 32L90 76L65 43Z" fill="#292a23"/><rect x="46" y="110" width="58" height="25" rx="6" fill="#292a23"/><rect x="121" y="110" width="58" height="25" rx="6" fill="#292a23"/><path d="M104 121H121" stroke="#292a23" stroke-width="7"/><path d="M91 173L144 173" stroke="#292a23" stroke-width="5"/></g>
+    <g transform="translate(422 110) rotate(7 90 140)"><path d="M0 335Q8 220 40 175L35 90Q42 20 105 20Q174 20 180 94L170 186Q205 260 200 335Z" fill="#c1ad8b"/><ellipse cx="104" cy="113" rx="62" ry="76" fill="#bd967b"/><path d="M39 94Q20 0 104 0Q194 0 169 98L145 62L120 35L89 68L63 45Z" fill="#282921"/><path d="M59 115L95 122M114 122L149 112" stroke="#292a23" stroke-width="8"/><circle cx="80" cy="120" r="5"/><circle cx="132" cy="119" r="5"/><path d="M92 155Q111 168 132 152" stroke="#292a23" stroke-width="5" fill="none"/></g>
+    <g fill="#e0dccb" font-family="Georgia" font-style="italic"><text x="16" y="35" font-size="22">the handsome band.</text><text x="455" y="420" font-size="17">P.B. / 01</text></g>
+   </svg>
+  </div>
+ </div>
+</section>
+<div class="ticker"><span>PILLBOX — EST. 2024 — ALTERNATIVE MUSIC — FIVE MEMBERS — PILLBOX — EST. 2024 — ALTERNATIVE MUSIC — FIVE MEMBERS — PILLBOX — EST. 2024 — ALTERNATIVE MUSIC — FIVE MEMBERS — </span></div>
+<section id="about" class="section wrap">
+ <div class="eyebrow">01 / THE STORY</div><div class="story-grid"><h2 class="head section-title">MADE OF<br>DIFFERENT<br><span class="olive">PEOPLE.</span></h2><div><p class="story-text">It started in 2024. The faces changed, the sounds evolved, but the idea stayed the same.</p><p class="bodycopy">Pillbox is not about fitting into one particular sound. It is about five different personalities making something together. A collection of ideas, imperfections, and noise.</p><div class="mono" style="font-size:10px;border-top:1px solid #aaa797;padding-top:15px;margin-top:30px">BAND HISTORY / 2024 — PRESENT</div></div></div>
+</section>
+<section id="members" class="members-section wrap">
+ <div class="eyebrow">02 / THE LINEUP</div><h2 class="head section-title">THE PEOPLE.</h2><div class="members" id="members-list"></div>
+ <div class="bio" id="bio"><button onclick="document.getElementById('bio').classList.remove('show')">CLOSE ×</button><strong class="head" style="font-size:30px" id="bio-name"></strong><div class="mono" style="font-size:10px;margin-top:5px" id="bio-role"></div><p id="bio-desc"></p></div>
+</section>
+<section id="music" class="section wrap">
+ <div class="eyebrow">03 / MUSIC & RECORDINGS</div><h2 class="head section-title">THE RECORDS.</h2><div class="records-grid" id="records"></div>
+ <div class="tracklist" id="tracklist"></div>
+ <p class="bodycopy" style="margin-top:18px">DEMO AUDIO WILL BE AVAILABLE HERE WHEN THE BAND UPLOADS THE RECORDINGS.</p>
+</section>
+<section class="quote"><div class="wrap"><div class="eyebrow" style="color:#e8e4d5">04 / A SMALL REMINDER</div><blockquote>“Not everything needs to make sense. Sometimes it just needs to sound right.”</blockquote><div class="mono" style="font-size:10px;margin-top:25px">— PILLBOX</div></div></section>
+<section id="find" class="section wrap">
+ <div class="eyebrow">05 / FIND THE BAND</div><div class="contact-grid"><h2 class="head section-title">SAY<br>HELLO<span style="color:var(--red)">.</span></h2><div><p class="story-text">For music, collaborations, or just a conversation.</p><div class="contact-links"><a href="https://instagram.com/pillboxfm" target="_blank" rel="noopener"><span>INSTAGRAM / @PILLBOXFM</span><span>↗</span></a><a href="https://wa.me/6285795131242" target="_blank" rel="noopener"><span>WHATSAPP / DJ QYLLA</span><span>↗</span></a></div></div></div>
+</section>
+</main>
+<footer class="wrap"><span>PILLBOX © 2026</span><span>MADE WITH NO PARTICULAR PLAN.</span><a href="#top">BACK TO TOP ↑</a></footer>
+<div class="player"><button id="play" aria-label="Play or pause">▶</button><div class="player-info"><strong id="now">PILLBOX / NO TRACK SELECTED</strong><small id="player-status">DEMO PLAYER / ADD YOUR MP3 FILES TO THE MUSIC FOLDER</small></div><span class="mono" style="font-size:10px">P!LLBOX.FM</span><audio id="audio" preload="metadata"></audio></div>
+<script>
+const members=[
+ {name:"ELCUOMO",role:"VOCAL / GUITAR",note:"THE PERFECTIONIST",desc:"The handsome perfectionist. Always neat, always confident, and perhaps a little too fond of himself.",bg:"#a64d3d",skin:"#d0ae92",hair:"#282921",style:0},
+ {name:"RAPAWOK",role:"GUITAR",note:"THE UNPREDICTABLE",desc:"Freedom in human form. Unusual, unpredictable, and never particularly interested in fitting in.",bg:"#777b5c",skin:"#bd987e",hair:"#25261f",style:1},
+ {name:"RISSS",role:"BASS",note:"THE HAPPY CHAOS",desc:"Long hair, a permanent smile, and a relaxed chaotic energy. The band’s happy presence.",bg:"#a9a18d",skin:"#bd997e",hair:"#282921",style:2},
+ {name:"ATIR",role:"DRUMS",note:"THE QUIET ONE",desc:"Quiet, composed, and effortlessly cool. Usually found keeping things together behind the kit.",bg:"#777b5c",skin:"#b89a7e",hair:"#292a24",style:0},
+ {name:"UQI",role:"SYNTH",note:"THE SILENT FREQUENCY",desc:"Calm, handsome, and quietly in his own world. The understated presence behind the synths.",bg:"#a64d3d",skin:"#d0aa8e",hair:"#24251f",style:1}
+];
+function portrait(m){let hair=m.style===2?`<path d="M42 88Q15 8 105 5Q190 7 166 101L150 74L172 170L147 151L155 229L125 159L107 239L85 155L48 226L61 146L29 177Z" fill="${m.hair}"/>`:`<path d="M46 86Q35 2 104 2Q175 5 159 90L140 54L116 30L90 65L69 40Z" fill="${m.hair}"/>`;return `<svg viewBox="0 0 200 250" role="img" aria-label="Stylized portrait of ${m.name}"><rect width="200" height="250" fill="${m.bg}"/><path d="M18 250Q10 160 48 140L38 75Q45 8 103 10Q165 10 165 80L153 145Q185 190 183 250Z" fill="#292a23"/>${hair}<ellipse cx="103" cy="99" rx="55" ry="68" fill="${m.skin}"/><path d="M58 105L93 111M113 111L146 103" stroke="#24251f" stroke-width="7"/><circle cx="77" cy="107" r="4"/><circle cx="132" cy="107" r="4"/><path d="M89 139Q108 148 130 137" stroke="#24251f" stroke-width="5" fill="none"/></svg>`}
+document.getElementById("members-list").innerHTML=members.map((m,i)=>`<button class="member" onclick="showBio(${i})"><div class="portrait">${portrait(m)}</div><div class="member-name">${m.name}</div><div class="member-role">${m.role}</div><div class="member-note">${m.note}</div></button>`).join("");
+function showBio(i){let m=members[i];document.getElementById("bio-name").textContent=m.name;document.getElementById("bio-role").textContent=m.role;document.getElementById("bio-desc").textContent=m.desc;document.getElementById("bio").classList.add("show");}
+const tracks=[["Demo 01","PB / 001","music/demo-01.mp3"],["Demo 02","PB / 002","music/demo-02.mp3"]];
+document.getElementById("records").innerHTML=tracks.map((t,i)=>`<article class="record"><div class="art"><svg viewBox="0 0 400 400"><rect width="400" height="400" fill="${i?"#c4ad92":"#a7a48d"}"/>${i?'<path d="M-20 70Q140 -30 420 100V400H-20Z" fill="#a64d3d"/><path d="M0 320Q160 180 400 270" stroke="#292a23" stroke-width="55" fill="none"/><circle cx="204" cy="172" r="85" fill="#777b5c"/><circle cx="204" cy="172" r="38" fill="#292a23"/>':'<circle cx="205" cy="197" r="150" fill="#777b5c"/><circle cx="205" cy="197" r="112" fill="#292a23"/><circle cx="205" cy="197" r="75" fill="#dcd9c9"/><circle cx="205" cy="197" r="17" fill="#a64d3d"/><path d="M0 300L400 80" stroke="#a64d3d" stroke-width="14"/>'}<text x="18" y="45" fill="#292a23" font-family="Georgia" font-style="italic" font-size="29">Pillbox / ${i?"demo 02":"demo 01"}</text></svg></div><div class="record-meta"><span class="record-title">${t[0].toUpperCase()}</span><span class="mono" style="font-size:10px">${t[1]}</span></div><div class="record-note">ADD AUDIO FILE TO ENABLE PLAYBACK</div></article>`).join("");
+document.getElementById("tracklist").innerHTML=tracks.map((t,i)=>`<button class="track" data-index="${i}" onclick="playTrack(${i})"><span class="num">0${i+1}</span><span class="details"><span class="name">${t[0]}</span><br><span class="sub">${t[1]} / MP3</span></span><span>▶</span></button>`).join("");
+const audio=document.getElementById("audio");let current=-1;
+function playTrack(i){current=i;audio.src=tracks[i][2];audio.play().then(()=>{document.getElementById("now").textContent="PLAYING / "+tracks[i][0].toUpperCase();document.getElementById("player-status").textContent="PILLBOX DEMO RECORDING";document.getElementById("play").textContent="Ⅱ";}).catch(()=>{document.getElementById("now").textContent=tracks[i][0].toUpperCase()+" — AUDIO FILE NOT FOUND";document.getElementById("player-status").textContent="UPLOAD "+(i?"demo-02.mp3":"demo-01.mp3")+" TO THE MUSIC FOLDER";});document.querySelectorAll(".track").forEach((el,n)=>el.classList.toggle("active",n===i));}
+document.getElementById("play").addEventListener("click",()=>{if(current<0){playTrack(0);return}if(audio.paused){audio.play().then(()=>document.getElementById("play").textContent="Ⅱ").catch(()=>{});}else{audio.pause();document.getElementById("play").textContent="▶";}});
+audio.addEventListener("ended",()=>{document.getElementById("play").textContent="▶";document.getElementById("now").textContent="END OF RECORDING";});
+</script>
+</body>
+</html>
